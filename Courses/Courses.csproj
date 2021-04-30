@@ -196,6 +196,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -240,6 +241,10 @@
     <Compile Include="Migrations\202104301027346_PopulateStudentsTable.cs" />
     <Compile Include="Migrations\202104301027346_PopulateStudentsTable.designer.cs">
       <DependentUpon>202104301027346_PopulateStudentsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301134410_PopulateCoursesTable.cs" />
+    <Compile Include="Migrations\202104301134410_PopulateCoursesTable.Designer.cs">
+      <DependentUpon>202104301134410_PopulateCoursesTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdmissionTermCode.cs" />
@@ -287,6 +292,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -334,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104301027346_PopulateStudentsTable.resx">
       <DependentUpon>202104301027346_PopulateStudentsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301134410_PopulateCoursesTable.resx">
+      <DependentUpon>202104301134410_PopulateCoursesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

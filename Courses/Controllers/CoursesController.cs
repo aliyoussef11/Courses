@@ -8,11 +8,11 @@ using System.Data.Entity;
 
 namespace Courses.Controllers
 {
-    public class StudentsController : Controller
+    public class CoursesController : Controller
     {
         private AppDbContext db;
 
-        public StudentsController()
+        public CoursesController()
         {
             db = new AppDbContext();
         }
@@ -20,12 +20,11 @@ namespace Courses.Controllers
         {
             db.Dispose();
         }
-
-        // GET: Students
+        // GET: Courses
         public ActionResult Index()
         {
-            var students = db.Students.Include(c => c.AdmissionTermCode).Include(c => c.major).ToList();
-            return View(students);
+            var courses = db.Courses.Include(c => c.department).ToList();
+            return View(courses);
         }
     }
 }
