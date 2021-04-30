@@ -8,6 +8,7 @@ namespace Courses.Models
 {
     public class Major
     {
+        [Display(Name = "Major Name")]
         public int MajorId { get; set; }
 
         [Display(Name = "Major Name")]

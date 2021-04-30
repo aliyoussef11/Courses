@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using Courses.ViewModels;
 
 namespace Courses.Controllers
 {
@@ -26,6 +27,18 @@ namespace Courses.Controllers
         {
             var students = db.Students.Include(c => c.AdmissionTermCode).Include(c => c.major).ToList();
             return View(students);
+        }
+
+        public ActionResult Create()
+        {
+            var admissionTermCodes = db.AdmissionTermCodes.ToList();
+            var majors = db.Majors.ToList();
+            var viewModel = new NewStudentViewModel
+            {
+                admissionTermCodes = admissionTermCodes,
+                majors = majors
+            };
+            return View(viewModel);
         }
     }
 }

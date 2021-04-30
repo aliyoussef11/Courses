@@ -10,6 +10,7 @@ namespace Courses.Models
     public class AdmissionTermCode
     {      
         [Key]
+        [Display (Name = "Admission Semester")]
         public int AdmissionCodeId { get; set; }
 
         public char AdmissionCode { get; set; }
