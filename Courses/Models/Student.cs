@@ -18,15 +18,14 @@ namespace Courses.Models
         public string LastName { get; set; }
 
         // Generate Foreign Key to AdmissionTermCode
-        [StringLength(9)]
-        public char AdmissionTermCode { get; set; }
-        [ForeignKey("AdmissionCode")]
-        public virtual AdmissionTermCode admissionTermCode { get; set; }
+        public int AdmissionCodeId { get; set; }
+        [ForeignKey("AdmissionCodeId")]
+        public virtual AdmissionTermCode AdmissionTermCode { get; set; }
 
         public DateTime DateOfBirth { get; set; }
 
         // Generate Foreign Key to Major
-        public byte MajorId { get; set; }
+        public int MajorId { get; set; }
         [ForeignKey("MajorId")]
         public virtual Major major { get; set; }
 

@@ -205,6 +205,26 @@
     <Compile Include="Migrations\202104300829593_InitialMigration.designer.cs">
       <DependentUpon>202104300829593_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104300917096_CreateMajorsTable.cs" />
+    <Compile Include="Migrations\202104300917096_CreateMajorsTable.designer.cs">
+      <DependentUpon>202104300917096_CreateMajorsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104300936012_CreateDepartmentTable.cs" />
+    <Compile Include="Migrations\202104300936012_CreateDepartmentTable.designer.cs">
+      <DependentUpon>202104300936012_CreateDepartmentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104300939186_CreateCoursesTable.cs" />
+    <Compile Include="Migrations\202104300939186_CreateCoursesTable.designer.cs">
+      <DependentUpon>202104300939186_CreateCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104300957177_CreateAdmissionCodesTable.cs" />
+    <Compile Include="Migrations\202104300957177_CreateAdmissionCodesTable.designer.cs">
+      <DependentUpon>202104300957177_CreateAdmissionCodesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301002438_CreateStudentsTable.cs" />
+    <Compile Include="Migrations\202104301002438_CreateStudentsTable.designer.cs">
+      <DependentUpon>202104301002438_CreateStudentsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdmissionTermCode.cs" />
     <Compile Include="Models\AppDbContext.cs" />
@@ -270,6 +290,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104300829593_InitialMigration.resx">
       <DependentUpon>202104300829593_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104300917096_CreateMajorsTable.resx">
+      <DependentUpon>202104300917096_CreateMajorsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104300936012_CreateDepartmentTable.resx">
+      <DependentUpon>202104300936012_CreateDepartmentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104300939186_CreateCoursesTable.resx">
+      <DependentUpon>202104300939186_CreateCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104300957177_CreateAdmissionCodesTable.resx">
+      <DependentUpon>202104300957177_CreateAdmissionCodesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301002438_CreateStudentsTable.resx">
+      <DependentUpon>202104301002438_CreateStudentsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
