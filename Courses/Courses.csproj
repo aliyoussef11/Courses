@@ -225,6 +225,22 @@
     <Compile Include="Migrations\202104301002438_CreateStudentsTable.designer.cs">
       <DependentUpon>202104301002438_CreateStudentsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104301008240_PopulateMajorsTable.cs" />
+    <Compile Include="Migrations\202104301008240_PopulateMajorsTable.designer.cs">
+      <DependentUpon>202104301008240_PopulateMajorsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301012054_PopulateDepartmentsTable.cs" />
+    <Compile Include="Migrations\202104301012054_PopulateDepartmentsTable.designer.cs">
+      <DependentUpon>202104301012054_PopulateDepartmentsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301017138_PopulateDAdmissionCodesTable.cs" />
+    <Compile Include="Migrations\202104301017138_PopulateDAdmissionCodesTable.designer.cs">
+      <DependentUpon>202104301017138_PopulateDAdmissionCodesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301027346_PopulateStudentsTable.cs" />
+    <Compile Include="Migrations\202104301027346_PopulateStudentsTable.designer.cs">
+      <DependentUpon>202104301027346_PopulateStudentsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdmissionTermCode.cs" />
     <Compile Include="Models\AppDbContext.cs" />
@@ -305,6 +321,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104301002438_CreateStudentsTable.resx">
       <DependentUpon>202104301002438_CreateStudentsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301008240_PopulateMajorsTable.resx">
+      <DependentUpon>202104301008240_PopulateMajorsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301012054_PopulateDepartmentsTable.resx">
+      <DependentUpon>202104301012054_PopulateDepartmentsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301017138_PopulateDAdmissionCodesTable.resx">
+      <DependentUpon>202104301017138_PopulateDAdmissionCodesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301027346_PopulateStudentsTable.resx">
+      <DependentUpon>202104301027346_PopulateStudentsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
