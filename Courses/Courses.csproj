@@ -246,6 +246,10 @@
     <Compile Include="Migrations\202104301134410_PopulateCoursesTable.Designer.cs">
       <DependentUpon>202104301134410_PopulateCoursesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104302330464_HelperMigration.cs" />
+    <Compile Include="Migrations\202104302330464_HelperMigration.Designer.cs">
+      <DependentUpon>202104302330464_HelperMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdmissionTermCode.cs" />
     <Compile Include="Models\AppDbContext.cs" />
@@ -345,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104301134410_PopulateCoursesTable.resx">
       <DependentUpon>202104301134410_PopulateCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104302330464_HelperMigration.resx">
+      <DependentUpon>202104302330464_HelperMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

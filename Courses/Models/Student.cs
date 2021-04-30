@@ -11,9 +11,11 @@ namespace Courses.Models
     {
         public byte Id { get; set; }
 
+        [Required]
         [StringLength(60)]
         public string FirstName { get; set; }
 
+        [Required]
         [StringLength(60)]
         public string LastName { get; set; }
 
@@ -22,7 +24,10 @@ namespace Courses.Models
         [ForeignKey("AdmissionCodeId")]
         public virtual AdmissionTermCode AdmissionTermCode { get; set; }
 
+
+        [Required]
         public DateTime DateOfBirth { get; set; }
+
 
         // Generate Foreign Key to Major
         public int MajorId { get; set; }

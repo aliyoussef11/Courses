@@ -40,5 +40,14 @@ namespace Courses.Controllers
             };
             return View(viewModel);
         }
+
+        [HttpPost]
+        public ActionResult CreateNewStudent(Student student)
+        {
+            db.Students.Add(student);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Students");
+        }
     }
 }
