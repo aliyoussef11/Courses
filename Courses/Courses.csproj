@@ -258,11 +258,16 @@
     <Compile Include="Migrations\202105010322423_SomeModifications.Designer.cs">
       <DependentUpon>202105010322423_SomeModifications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105010433324_CreateEnrollmentsTable.cs" />
+    <Compile Include="Migrations\202105010433324_CreateEnrollmentsTable.Designer.cs">
+      <DependentUpon>202105010433324_CreateEnrollmentsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdmissionTermCode.cs" />
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\Major.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -368,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105010322423_SomeModifications.resx">
       <DependentUpon>202105010322423_SomeModifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105010433324_CreateEnrollmentsTable.resx">
+      <DependentUpon>202105010433324_CreateEnrollmentsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
