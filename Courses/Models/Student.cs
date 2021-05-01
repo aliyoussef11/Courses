@@ -12,11 +12,11 @@ namespace Courses.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public byte Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Please enter your First Name")]
         [StringLength(60)]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter your Last Name")]
         [StringLength(60)]
         public string LastName { get; set; }
 
@@ -26,7 +26,7 @@ namespace Courses.Models
         public virtual AdmissionTermCode AdmissionTermCode { get; set; }
 
 
-        [Required]
+        [Required(ErrorMessage = "Please enter your BirthDate")]
         public DateTime DateOfBirth { get; set; }
 
 

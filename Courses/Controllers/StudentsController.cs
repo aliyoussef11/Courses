@@ -44,6 +44,18 @@ namespace Courses.Controllers
         [HttpPost]
         public ActionResult CreateNewStudent(Student student)
         {
+            if(!ModelState.IsValid)
+            {
+                var admissionTermCodes = db.AdmissionTermCodes.ToList();
+                var majors = db.Majors.ToList();
+                var viewModel = new NewStudentViewModel
+                {
+                    admissionTermCodes = admissionTermCodes,
+                    majors = majors,
+                    Student = student
+                };
+                return View("Create", viewModel);
+            }
             db.Students.Add(student);
             db.SaveChanges();
 
