@@ -11,7 +11,7 @@
                 "dbo.Students",
                 c => new
                     {
-                        Id = c.Byte(nullable: false),
+                        Id = c.Byte(nullable: false, identity: true),
                         FirstName = c.String(maxLength: 60),
                         LastName = c.String(maxLength: 60),
                         AdmissionCodeId = c.Int(nullable: false),

@@ -7,7 +7,8 @@
     {
         public override void Up()
         {
-     
+            Sql("SET IDENTITY_INSERT Students ON");
+
             //Seeding the Students Table
             Sql("insert into Students(Id, FirstName, LastName, AdmissionCodeId, DateOfBirth, MajorId) " +
                 "values (1, 'Ali', 'Youssef', 202120,'1/1/2000', 1)");

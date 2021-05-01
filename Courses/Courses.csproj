@@ -214,10 +214,6 @@
     <Compile Include="Migrations\202104300936012_CreateDepartmentTable.designer.cs">
       <DependentUpon>202104300936012_CreateDepartmentTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104300939186_CreateCoursesTable.cs" />
-    <Compile Include="Migrations\202104300939186_CreateCoursesTable.designer.cs">
-      <DependentUpon>202104300939186_CreateCoursesTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202104300957177_CreateAdmissionCodesTable.cs" />
     <Compile Include="Migrations\202104300957177_CreateAdmissionCodesTable.designer.cs">
       <DependentUpon>202104300957177_CreateAdmissionCodesTable.cs</DependentUpon>
@@ -242,13 +238,25 @@
     <Compile Include="Migrations\202104301027346_PopulateStudentsTable.designer.cs">
       <DependentUpon>202104301027346_PopulateStudentsTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104301134410_PopulateCoursesTable.cs" />
-    <Compile Include="Migrations\202104301134410_PopulateCoursesTable.Designer.cs">
-      <DependentUpon>202104301134410_PopulateCoursesTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202104302330464_HelperMigration.cs" />
     <Compile Include="Migrations\202104302330464_HelperMigration.Designer.cs">
       <DependentUpon>202104302330464_HelperMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105010142038_CreateCoursesTable.cs" />
+    <Compile Include="Migrations\202105010142038_CreateCoursesTable.Designer.cs">
+      <DependentUpon>202105010142038_CreateCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105010208010_DataAnnotationToCourse.cs" />
+    <Compile Include="Migrations\202105010208010_DataAnnotationToCourse.Designer.cs">
+      <DependentUpon>202105010208010_DataAnnotationToCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105010224394_PopulateCourseTable.cs" />
+    <Compile Include="Migrations\202105010224394_PopulateCourseTable.Designer.cs">
+      <DependentUpon>202105010224394_PopulateCourseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105010322423_SomeModifications.cs" />
+    <Compile Include="Migrations\202105010322423_SomeModifications.Designer.cs">
+      <DependentUpon>202105010322423_SomeModifications.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdmissionTermCode.cs" />
@@ -258,6 +266,7 @@
     <Compile Include="Models\Major.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\NewCourseViewModel.cs" />
     <Compile Include="ViewModels\NewStudentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -299,6 +308,7 @@
     <Content Include="Views\Students\Index.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -326,9 +336,6 @@
     <EmbeddedResource Include="Migrations\202104300936012_CreateDepartmentTable.resx">
       <DependentUpon>202104300936012_CreateDepartmentTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104300939186_CreateCoursesTable.resx">
-      <DependentUpon>202104300939186_CreateCoursesTable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104300957177_CreateAdmissionCodesTable.resx">
       <DependentUpon>202104300957177_CreateAdmissionCodesTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,11 +354,20 @@
     <EmbeddedResource Include="Migrations\202104301027346_PopulateStudentsTable.resx">
       <DependentUpon>202104301027346_PopulateStudentsTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104301134410_PopulateCoursesTable.resx">
-      <DependentUpon>202104301134410_PopulateCoursesTable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104302330464_HelperMigration.resx">
       <DependentUpon>202104302330464_HelperMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105010142038_CreateCoursesTable.resx">
+      <DependentUpon>202105010142038_CreateCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105010208010_DataAnnotationToCourse.resx">
+      <DependentUpon>202105010208010_DataAnnotationToCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105010224394_PopulateCourseTable.resx">
+      <DependentUpon>202105010224394_PopulateCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105010322423_SomeModifications.resx">
+      <DependentUpon>202105010322423_SomeModifications.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
