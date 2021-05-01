@@ -12,10 +12,11 @@ namespace Courses.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public byte CourseId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter The Course Name")]
         public string CourseName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter The Number Of Credits")]
+        [Range(1,4)]
         public int Credits { get; set; }
 
         // Generate Foreign Key to Department

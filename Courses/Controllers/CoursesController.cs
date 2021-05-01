@@ -41,6 +41,17 @@ namespace Courses.Controllers
         [HttpPost]
         public ActionResult CreateNewCourse(Course course)
         {
+            if (!ModelState.IsValid)
+            {
+                var departments = db.Departments.ToList();
+                
+                var viewModel = new NewCourseViewModel
+                {
+                    departments = departments,
+                    Course = course
+                };
+                return View("Create", viewModel);
+            }
             db.Courses.Add(course);
             db.SaveChanges();
 
