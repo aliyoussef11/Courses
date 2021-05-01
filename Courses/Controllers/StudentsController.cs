@@ -61,5 +61,31 @@ namespace Courses.Controllers
 
             return RedirectToAction("Index", "Students");
         }
+
+        public ActionResult ShowCourseRegistered(int Id)
+        {
+            var coursesRegistered = db.Enrollments.Include(c => c.Student).Where(s => s.Id == Id).ToList();
+            return View(coursesRegistered);
+        }
+
+        public ActionResult Register()
+        {
+            return RedirectToAction("Register", "Enrollments");
+        }
+
+        public ActionResult Delete(int id2Delete)
+        {
+            var student = db.Students.Find(id2Delete);
+            var studentinEnrollment = db.Enrollments.Find(id2Delete);
+            
+            db.Students.Remove(student);
+            db.Enrollments.Remove(studentinEnrollment);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+
+
     }
 }

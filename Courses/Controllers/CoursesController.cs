@@ -58,6 +58,15 @@ namespace Courses.Controllers
             return RedirectToAction("Index", "Courses");
         }
 
+        public ActionResult Delete(int id)
+        {
+            var course = db.Courses.Find(id);
+            db.Courses.Remove(course);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
 
         }
 }

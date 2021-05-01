@@ -317,6 +317,7 @@
     <Content Include="Views\Students\Create.cshtml" />
     <Content Include="Views\Courses\Create.cshtml" />
     <Content Include="Views\Enrollments\Register.cshtml" />
+    <Content Include="Views\Students\ShowCourseRegistered.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
