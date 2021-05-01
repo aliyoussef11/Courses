@@ -1,0 +1,62 @@
+﻿@model Courses.ViewModels.NewEnrollmentViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Register Students In Courses</h2>
+
+@using (Html.BeginForm("RegisterStudentInCourse", "Enrollments"))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.Enrollment.AdmissionCodeId)
+    @Html.DropDownListFor(m => m.Enrollment.AdmissionCodeId, new SelectList(Model.admissionTermCodes, "AdmissionCodeId", "AdmissionCodeId"),
+    "Select Your Admission Code", new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Enrollment.AdmissionCodeId)
+</div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Enrollment.Id)
+        @Html.DropDownListFor(m => m.Enrollment.Id, new SelectList(Model.students, "Id", "FirstName", "LastName"),
+        "Select The Student Name", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Enrollment.Id)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Enrollment.CourseId)
+        @Html.DropDownListFor(m => m.Enrollment.CourseId, new SelectList(Model.courses, "CourseId", "CourseName"),
+        "Select The Course Name", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Enrollment.CourseId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Enrollment.MajorId)
+        @Html.DropDownListFor(m => m.Enrollment.MajorId, new SelectList(Model.majors, "MajorId", "Name"),
+        "Select The Major Name", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Enrollment.MajorId)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Enrollment.Grade)
+        @Html.TextBoxFor(m => m.Enrollment.Grade, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Enrollment.Grade)
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Enrollment.EnrolledIndicator) Enrolled Indicator
+            @Html.ValidationMessageFor(m => m.Enrollment.EnrolledIndicator)
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Enrollment.PaymentIndicator) Payment Indicator
+            @Html.ValidationMessageFor(m => m.Enrollment.PaymentIndicator)
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+
+
+
+
+}
+
+
+
